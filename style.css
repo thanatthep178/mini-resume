@@ -1,0 +1,127 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* โครงสร้างกล่องเรซูเม่หลัก */
+.resume-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    display: flex;
+    /* display: flex; ไว้จัดสัดส่วนเว็บ(35% 65%)*/
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* คอลัมน์ซ้าย (ข้อมูลส่วนตัวและทักษะ) */
+.left-column {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 30px;
+    width: 35%;
+}
+
+.left-column h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.left-column p.role {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1abc9c;
+    margin-bottom: 30px;
+}
+
+.left-column h2 {
+    font-size: 18px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.left-column ul {
+    list-style-type: none;
+}
+
+.left-column ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* คอลัมน์ขวา (ประวัติการทำงานและการศึกษา) */
+.right-column {
+    padding: 30px;
+    width: 65%;
+}
+
+.right-column h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.section-item {
+    margin-bottom: 25px;
+}
+
+.section-item h3 {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.section-item .date-location {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.right-column ul {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.right-column ul li {
+    margin-bottom: 8px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    object-fit: cover; /* ป้องกันผิดสัดส่วน */
+    border: 3px solid #1abc9c; /* เพิ่มกรอบสีเขียวให้รูป */
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* 📱 Responsive Design: สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 768px)
+/*max-width: 768pxจะทำงานตอนหน้าจอมีความกว้างเกิน 768 พิกเซล จะเปลี่ยนไปใช้แนวนอน*/ {
+    .resume-container {
+        flex-direction: column;
+        /* เปลี่ยนกล่องจากแนวนอนเป็นแนวตั้ง */
+        margin: 0;
+        border-radius: 0;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
